@@ -33,7 +33,7 @@ import { TerrainWithPaths } from './components/models/TerrainWithPaths';
 import { PathX } from './components/models/PathX';
 
 import LoaderWrapper from './components/Loader.jsx';
-import { Terrain } from './components/models/Terrain';
+// import { Terrain } from './components/models/Terrain';
 import { Zeppelin } from './components/models/Zeppelin';
 import { Road3 } from './components/models/Road3';
 import { Road4 } from './components/models/Road4';
@@ -55,9 +55,9 @@ const RingsMobile = dynamic(() => import('./components/models/RingsMobile'), {
 
 import { useRouter } from 'next/navigation';
 import dynamic from 'next/dynamic';
-Globals.assign({
-  frameLoop: 'always',
-});
+// Globals.assign({
+//   frameLoop: 'always',
+// });
 
 const MainScene = memo(function MainScene({ handleOpenAccountInfo, fairId }) {
   const [isMobile, setIsMobile] = useState(false);
@@ -87,7 +87,7 @@ const MainScene = memo(function MainScene({ handleOpenAccountInfo, fairId }) {
   const ambientColor = '#FFA500';
   const ambientIntensity = 0.3;
   const dirColor = '#fffbb4';
-  const dirIntensity = 2;
+  const dirIntensity = 1;
   const hemisphereIntensity = 0.7;
   const shadowCameraRef = useRef();
   const { gridPositions } = useContext(GridContext);
@@ -105,14 +105,14 @@ const MainScene = memo(function MainScene({ handleOpenAccountInfo, fairId }) {
         dpr={dpr}
         camera={{ position: [10, 13, -25], fov: 80 }}
       >
-        {/* <PerformanceMonitor
+        <PerformanceMonitor
           onIncline={() => setDpr(2)}
           onDecline={() => setDpr(1)}
-        /> */}
-        {/* <AdaptiveDpr pixelated />
-        <AdaptiveEvents /> */}
+        />
+        <AdaptiveDpr pixelated />
+        <AdaptiveEvents />
         <Suspense >
-          {/* <Cloud
+          <Cloud
             opacity={0.2}
             scale={50}
             speed={0.1} // Rotation speed
@@ -147,15 +147,15 @@ const MainScene = memo(function MainScene({ handleOpenAccountInfo, fairId }) {
             depth={0.11} // Z-dir depth
             segments={20} // Number of particles
             position={[-520, 310, -520]}
-          /> */}
-          {/* <Stats showPanel={0} className="stats" /> */}
-          {/* <Preload all />
+          />
+          <Stats showPanel={0} className="stats" />
+          <Preload all />
           <Zeppelin
             scale={0.002}
             rotation={[0, toRadians(225), 0]}
             position={[-100, 4, 30]}
-          /> */}
-          {/* <directionalLight
+          />
+          <directionalLight
             position={[10, 90, 60]}
             angle={0.3}
             penumbra={1}
@@ -173,24 +173,24 @@ const MainScene = memo(function MainScene({ handleOpenAccountInfo, fairId }) {
               attach="shadow-camera"
               args={[-50, 50, 40, -50, 0.1, 3530]}
             />
-          </directionalLight> */}
-          {/* <Grid handleOpenAccountInfo={handleOpenAccountInfo} /> */}
-          {/* <Text
+          </directionalLight>
+          <Grid handleOpenAccountInfo={handleOpenAccountInfo} />
+          <Text
             position={[-2.59, -0.08, -0.33]}
             rotation={[0, toRadians(45), 0]}
             color="#c0c0c0"
             scale={0.021}
           >
             Psst kid, wanna buy some frames?
-          </Text> */}
-          {/* <fog attach="fog" args={[fogColor, 40, 211.5]} /> */}
-          {/* <Theatre
+          </Text>
+          <fog attach="fog" args={[fogColor, 40, 211.5]} />
+          <Theatre
             position={[0, 0, 0]}
             scale={0.045}
             rotation={[0, toRadians(22.5), 0]}
             fairId={fairId}
-          /> */}
-          {/* <TheatreBase
+          />
+          <TheatreBase
             scale={0.002}
             rotation={[0, toRadians(45), 0]}
             position={[0, 0.01, 0]}
@@ -242,11 +242,11 @@ const MainScene = memo(function MainScene({ handleOpenAccountInfo, fairId }) {
               rotation={[toRadians(-90), toRadians(0), toRadians(45)]}
               position={[0, 0, 0]}
             />
-          )} */}
+          )}
 
-          {/* <BakeShadows /> */}
+          <BakeShadows />
           {/* <Landscape position={[0, -0.34, 0]} scale={3.8} /> */}
-          {/* <Windmil
+          <Windmil
             position={[16, 8.1, -136]}
             scale={1.5}
             rotation={[0, toRadians(15), 0]}
@@ -260,7 +260,7 @@ const MainScene = memo(function MainScene({ handleOpenAccountInfo, fairId }) {
             position={[-110, 3.1, -50]}
             scale={1.8}
             rotation={[0, toRadians(15), 0]}
-          /> */}
+          />
           <hemisphereLight
             color={hemisphereColor}
             groundColor={hemisphereGroundColor}
@@ -292,8 +292,7 @@ function Controls() {
   const { previewState } = useContext(GridContext);
 
   const isDomePreview = previewState === PREVIEW_STATES.DOME;
-  gl.gammaFactor = 0.21;
-  gl.gammaOutput = true;
+
   const AnimatedCamera = animated(PerspectiveCamera);
   const AnimatedOrbitControls = animated(OrbitControls);
   return (

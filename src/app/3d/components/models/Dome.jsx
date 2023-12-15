@@ -40,9 +40,9 @@ export function Dome(props) {
         <div className={`_3d-content ${hovered && 'active'}`}>
           <div className="_3d-description">
             <figure className="mb-2">
-              needs logo
+              Info pult
             </figure>
-            info pult message
+            {/* info pult message */}
           </div>
         </div>
       </Html>

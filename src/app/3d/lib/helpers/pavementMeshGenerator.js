@@ -94,7 +94,6 @@ export const pavementMeshGenerator = ({
     0
   );
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const points = [
     pointA,
     pointB,

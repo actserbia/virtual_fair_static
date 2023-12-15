@@ -23,7 +23,6 @@ Globals.assign({
 import DomeDetail from './components/models/DomeDetail';
 import Robot from './components/models/Robot';
 import { toRadians } from './lib/helpers/math';
-import { useIntl } from 'react-intl';
 import { Papercups } from '@papercups-io/chat-widget';
 import { useRouter } from 'next/router';
 import PageTransition from './components/PageTransition';

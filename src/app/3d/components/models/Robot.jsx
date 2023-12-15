@@ -5,9 +5,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { useGLTF, Html } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
-import { changeCursorOnHover } from '@/3d/lib/helpers/cursor';
-import CloudFlareLogoImg from '@/components/CloudFlareLogoImg/CloudFlareLogoImg';
-import NszLogo from '@/components/icons/NszLogo';
+import { changeCursorOnHover } from '../../lib/helpers/cursor';
 
 const Robot = (props) => {
   const { nodes, materials } = useGLTF('/models/robo.glb');
@@ -53,21 +51,11 @@ const Robot = (props) => {
           <div className={`_3d-content ${hovered && 'active'}`}>
             {infoPult ? (
               <figure className="mb-2">
-                <NszLogo width="120" height="50" />
+                nzs logo
               </figure>
             ) : (
               <figure className="relative mb-2 aspect-auto h-9 w-2/5">
-                <CloudFlareLogoImg
-                  imgSrc={
-                    company_logo !== undefined &&
-                    company_logo !== '' &&
-                    company_logo !== '/images/accounts/default.jpg'
-                      ? company_logo
-                      : `${process.env.NEXT_PUBLIC_FE_URL}images/accounts/default-3d.jpg`
-                  }
-                  alt={company_name}
-                  objectPosition="left"
-                />
+                logo again
               </figure>
             )}
             <div className="_3d-description">{tooltip}</div>

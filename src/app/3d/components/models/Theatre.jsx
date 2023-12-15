@@ -64,10 +64,10 @@ export function Theatre(props) {
           <Html position={[0, 0.15, 0]} className="_3d-content-wrapper tooltip">
             <div className={`_3d-content ${hovered && 'active'}`}>
               <figure className="mb-2">
-                Logo missin
+                {/* Theatre */}
               </figure>
               <div className="_3d-description">
-                Message missing conference
+                Theatre
               </div>
             </div>
           </Html>

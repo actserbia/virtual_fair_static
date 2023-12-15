@@ -105,3 +105,91 @@ a {
     color-scheme: dark;
   }
 }
+
+
+._3d-content {
+  pointer-events: none;
+  text-align: left;
+  background: white;
+  color: #202035;
+  padding: 15px 20px;
+  padding-bottom: 25px;
+  border-radius: 5px;
+  /* top: -6px;
+  right: 88px; */
+  position: relative;
+  width: 180px;
+  display: none;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+._3d-content.active {
+  display: block;
+  cursor: pointer;
+}
+
+/* ._3d-content::before {
+  content: '';
+  position: absolute;
+  top: 25px;
+  left: -40px;
+  height: 1px;
+  width: 40px;
+  background: black;
+} */
+._3d-content-wrapper {
+  pointer-events: none;
+  position: relative;
+  top: -50px;
+  left: 40px;
+}
+._3d-content-wrapper.tooltip {
+  top: -0px;
+  left: 30px;
+}
+._3d-content-wrapper.tooltip ._3d-content {
+  padding: 10px 20px;
+  width: 170px;
+}
+._3d-content-wrapper.tooltip ._3d-description {
+  padding-top: 0px;
+}
+._3d-sector {
+  padding-top: 10px;
+  font-size: 12px;
+  font-style: italic;
+}
+._3d-description {
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+._3d-name {
+  text-transform: capitalize;
+}
+
+._account-logo > span {
+  position: static !important;
+}
+._account-logo img {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+._3d-button {
+  z-index: 10000000;
+  position: absolute;
+  display: none;
+  top: 80px;
+  left: 10px;
+  background: red;
+  width: 70px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+._3d-button.active {
+  display: block;
+}

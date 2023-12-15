@@ -14,7 +14,6 @@ import {
 import { useSpring, animated } from '@react-spring/three';
 import * as THREE from 'three';
 import { Globals } from '@react-spring/shared';
-import { useIntl } from 'react-intl';
 
 Globals.assign({
   frameLoop: 'always',
@@ -24,8 +23,7 @@ import { BoothDetail } from './components/models/BoothDetail';
 import Robot from './components/models/Robot';
 import Logo from './components/Logo';
 import { toRadians } from './lib/helpers/math';
-import { Papercups } from '@papercups-io/chat-widget';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import PageTransition from './components/PageTransition';
 import LoaderWrapper from './components/Loader';
 
@@ -35,16 +33,6 @@ const DetailScene = memo(function DetailScene({ company_logo, company_name }) {
   const _hemisphereColor = new THREE.Color();
   const _hemisphereGroundColor = new THREE.Color();
 
-  const handleRouteChange = (url) => {
-    if (!url.includes('kompanije')) {
-      setIsLoading(true);
-    }
-  };
-  const handleRouteComplete = () => {
-    setIsLoading(false);
-  };
-  router.events.on('routeChangeStart', handleRouteChange);
-  router.events.on('routeChangeComplete', handleRouteComplete);
 
   _hemisphereColor.setHSL(0.6, 1, 0.6);
   // hsl(216 100% 60% / 1) #3385ff
@@ -72,7 +60,7 @@ const DetailScene = memo(function DetailScene({ company_logo, company_name }) {
     <>
       {isLoading && <PageTransition />}
       <Canvas
-        style={{ width: '100%', height: '100%' }}
+        style={{ width: '100vw', height: '100vh' }}
         shadows
         gl={{ powerPreference: 'high-performance' }}
         linear
@@ -86,12 +74,12 @@ const DetailScene = memo(function DetailScene({ company_logo, company_name }) {
               rotation={[0, -Math.PI, 0]}
               position={[0, 0, 0]}
             />
-            <Logo
+            {/* <Logo
               url={company_logo}
               rotation={[0, Math.PI, 0]}
               position={[0.19, 6.55, -3.2]}
               scale={62}
-            />
+            /> */}
             <Robot
               key="robot1"
               position={[0.04, 3.45, -4.975]}
@@ -116,7 +104,7 @@ const DetailScene = memo(function DetailScene({ company_logo, company_name }) {
             color={_hemisphereColor}
             groundColor={hemisphereGroundColor}
             position={[-7, 25, 13]}
-            intensity={0.5}
+            intensity={0.7}
           />
           {pointLightEnabled && <PointLight />}
           <ambientLight color={ambientColor} intensity={ambientIntensity} />
