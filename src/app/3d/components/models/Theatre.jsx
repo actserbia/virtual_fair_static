@@ -13,7 +13,7 @@ import { Notification } from './Notification';
 
 export function Theatre(props) {
   const ref = useRef();
-  const { nodes, materials } = useGLTF('/models/theatre.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/theatre.glb`);
   const [hovered, hover] = useState(false);
   useFrame(() => {
     materials.GREY_PHY.color = hovered

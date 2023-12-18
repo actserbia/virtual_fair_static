@@ -6,7 +6,7 @@ import React, { useRef } from 'react';
 import { useGLTF, PerspectiveCamera } from '@react-three/drei';
 
 export function PathX(props) {
-  const { nodes, materials } = useGLTF('/models/path_x.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/path_x.glb`);
   return (
     <group {...props} dispose={null}>
       <mesh

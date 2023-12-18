@@ -7,7 +7,7 @@ import { changeCursorOnHover } from '../../lib/helpers/cursor';
 
 export function Dome(props) {
   const router = useRouter();
-  const { nodes, materials } = useGLTF('/models/dome_object.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/dome_object.glb`);
 
   const [hovered, hover] = useState(false);
   useFrame(() => {

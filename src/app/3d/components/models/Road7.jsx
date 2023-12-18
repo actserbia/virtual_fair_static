@@ -6,7 +6,7 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export function Road7(props) {
-  const { nodes, materials } = useGLTF('/models/road7.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}models/road7.glb`);
   return (
     <group {...props} dispose={null}>
       <mesh

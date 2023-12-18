@@ -8,7 +8,7 @@ import { useFrame } from '@react-three/fiber';
 import { changeCursorOnHover } from '../../lib/helpers/cursor';
 
 const Robot = (props) => {
-  const { nodes, materials } = useGLTF('/models/robo.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/robo.glb`);
   const [hovered, hover] = useState(false);
   const robot = useRef();
   const robot1 = useRef();

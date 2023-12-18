@@ -6,7 +6,7 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export function Ring7SegmentLow(props) {
-  const { nodes, materials } = useGLTF('/models/ring7_segment_low.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/ring7_segment_low.glb`);
   return (
     <group {...props} dispose={null}>
       <group position={[-318.199, 0, 0.001]}>

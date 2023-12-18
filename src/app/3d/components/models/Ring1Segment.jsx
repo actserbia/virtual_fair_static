@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 
 export function Ring1Segment(props) {
-  const { nodes, materials } = useGLTF('/models/ring1_segment.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/ring1_segment.glb`);
   if (props.debugLod) materials.GREY_PHY.color = new THREE.Color('red');
 
   return (

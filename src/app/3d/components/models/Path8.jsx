@@ -6,7 +6,7 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export function Path8(props) {
-  const { nodes, materials } = useGLTF('/models/path8.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/path8.glb`);
   return (
     <group {...props} dispose={null}>
       <mesh

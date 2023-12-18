@@ -10,7 +10,7 @@ import DefaultMaterial from '../materials/DefaultMaterial';
 export function Windmil(props) {
   const group = useRef();
   const blades = React.useRef();
-  const { nodes, materials } = useGLTF('/models/windmil.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/windmil.glb`);
   const randomTime = Math.random() * 59;
   const speedFactor = Math.random() * (0.9 - 1.1) + 0.9;
   useFrame(({ clock }) => {

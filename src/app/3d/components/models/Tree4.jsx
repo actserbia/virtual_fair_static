@@ -6,7 +6,7 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export function Tree4(props) {
-  const { nodes, materials } = useGLTF('/models/tree04.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/tree04.glb`);
   return (
     <group {...props} dispose={null}>
       <mesh

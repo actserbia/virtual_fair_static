@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import { useGLTF } from '@react-three/drei';
 
 function DomeDetail(props) {
-  const { nodes, materials } = useGLTF('/models/dome_detail.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/dome_detail.glb`);
   const { companies, job_applications, positions } = props;
   const [digits, setDigits] = useState('000000000000');
 

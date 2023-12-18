@@ -3,7 +3,7 @@ import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 
 export function Notification(props) {
-  const { nodes, materials } = useGLTF('/models/notification.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/notification.glb`);
   const ref = useRef();
   const randomTime = Math.random() * 59;
   const speedFactor = Math.random() * (0.9 - 1.1) + 0.9 + 2;

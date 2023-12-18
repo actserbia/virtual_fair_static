@@ -7,7 +7,7 @@ import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 
 export function Zeppelin(props) {
-  const { nodes, materials } = useGLTF('/models/zeppelin.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/zeppelin.glb`);
   const zeppelin = useRef();
 
   useFrame(({ clock }) => {

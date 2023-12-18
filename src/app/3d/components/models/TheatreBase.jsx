@@ -6,7 +6,7 @@ import React, { useRef } from 'react';
 import { useGLTF, PerspectiveCamera } from '@react-three/drei';
 
 export function TheatreBase(props) {
-  const { nodes, materials } = useGLTF('/models/theatre_terrain.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/theatre_terrain.glb`);
   return (
     <group {...props} dispose={null}>
       <group position={[0, 0, 0]} rotation={[-Math.PI, -Math.PI / 4, -Math.PI]}>

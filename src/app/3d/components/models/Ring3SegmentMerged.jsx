@@ -3,7 +3,7 @@ import { useGLTF, Merged } from '@react-three/drei';
 
 const context = createContext();
 export function Ring3Instances({ children, ...props }) {
-  const { nodes } = useGLTF('/models/ring3_segment_low.glb');
+  const { nodes } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/ring3_segment_low.glb`);
   const instances = useMemo(
     () => ({
       RINGMODLOW: nodes.RING_3_MOD_LOW_1,

@@ -6,7 +6,7 @@ import React, { useRef } from 'react';
 import { useGLTF, PerspectiveCamera } from '@react-three/drei';
 
 export function Ring6Segment(props) {
-  const { nodes, materials } = useGLTF('/models/ring6_segment.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/ring6_segment.glb`);
   return (
     <group {...props} dispose={null}>
       <group position={[-318.199, 0, 0.001]}>

@@ -6,7 +6,7 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export function Garden(props) {
-  const { nodes, materials } = useGLTF('/models/dome_terrain.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/dome_terrain.glb`);
   materials.GREEN_1_PHY.roughness = 0.8;
   materials.GREEN_1_PHY.metalness = 0;
   materials.GREY_PHY.roughness = 0.8;

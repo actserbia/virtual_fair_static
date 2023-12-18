@@ -6,7 +6,7 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export function CinemaOpened(props) {
-  const { nodes, materials } = useGLTF('/models/cinema_opened.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/cinema_opened.glb`);
   return (
     <group {...props} dispose={null}>
       <group position={[0, 2.8, 4.205]} rotation={[-Math.PI / 2, 0, 0]}>

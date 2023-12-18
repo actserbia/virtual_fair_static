@@ -8,7 +8,7 @@ import Cell from './Cell';
 import { generateCurvedLinePoints } from '../lib/helpers/sceneGeneration';
 
 const Rows = ({ handleOpenAccountInfo }) => {
-  const { nodes } = useGLTF('/models/booth_low.glb');
+  const { nodes } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/booth_low.glb`);
   const {
     gridSizeY,
     radius,

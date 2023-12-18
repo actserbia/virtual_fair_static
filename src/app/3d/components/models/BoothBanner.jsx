@@ -2,7 +2,7 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export function BoothBanner(props) {
-  const { nodes, materials } = useGLTF('/models/booth-banner.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/booth-banner.glb`);
   return (
     <group {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>

@@ -6,7 +6,7 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export function Landscape(props) {
-  const { nodes, materials } = useGLTF('/models/landscape.glb');
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/landscape.glb`);
   return (
     <group {...props} dispose={null}>
       <mesh

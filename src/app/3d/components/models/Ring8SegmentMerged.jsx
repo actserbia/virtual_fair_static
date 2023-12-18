@@ -7,7 +7,7 @@ import { useGLTF, Merged, PerspectiveCamera } from '@react-three/drei';
 
 const context = createContext();
 export function Ring8Instances({ children, ...props }) {
-  const { nodes } = useGLTF('/models/ring8_segment_low.glb');
+  const { nodes } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/ring8_segment_low.glb`);
   const instances = useMemo(
     () => ({
       RINGMODLOW: nodes.RING_8_MOD_LOW_1,
