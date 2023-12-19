@@ -5,9 +5,9 @@ import GridProvider from './3d/contexts/GridContext'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Fair | React Three Fiber',
+  title: 'Three.js for 3D User Interfaces',
   openGraph: {
-    images: [`${process.env.NEXT_PUBLIC_ROOT}/images/og1`],
+    images: [`${process.env.NEXT_PUBLIC_ROOT}/images/og1.jpg`],
   },
 }
 

@@ -11,11 +11,11 @@ const LoaderWrapper = () => {
           containerStyles={{ background: 'transparent', color: 'black' }} // Flex layout styles
           innerStyles={{ background: '#333', marginBottom: '0px' }} // Inner container styles
           barStyles={{ background: '#d03a39' }} // Loading-bar styles
-          dataStyles={{ color: 'black', userSelect: 'none', fontSize: "13px", marginLeft: "-16px" }} // Text styles
-          dataInterpolation={(p) => `Учитавање сцене ${p.toFixed(0)}%`} // Text
+          dataStyles={{ color: 'black', userSelect: 'none', fontSize: "13px", marginLeft: "0" }} // Text styles
+          dataInterpolation={(p) => `Loading ${p.toFixed(0)}%`} // Text
           initialState={(active) => active} // Initial black out state
         />
-        {progress >=100 && <p className={`${styles["loading-text"]}`}> Молимо Вас сачекајте, сцена се припрема. </p>}
+        {progress >=100 && <p className={`${styles["loading-text"]}`}> Preparing the scene, please wait. </p>}
       </div>
 
     </Html>

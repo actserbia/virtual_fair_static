@@ -33,7 +33,7 @@ export function Theatre(props) {
   const { fairId } = props;
 
   const handleClick = () => {
-    router.push(`/theatre`);
+    // router.push(`/theatre`);
   };
 
   // materials.GREY_PHY.roughness = 0.8;

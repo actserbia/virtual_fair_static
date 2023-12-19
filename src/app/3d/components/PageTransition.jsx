@@ -13,7 +13,7 @@ const PageTransition = () => {
         innerStyles={{ background: '#333' }} // Inner container styles
         barStyles={{ background: '#d03a39' }} // Loading-bar styles
         dataStyles={{ color: 'black', userSelect: 'none' }} // Text styles
-        dataInterpolation={(p) => `Учитавање ${p.toFixed(2)}%`} // Text
+        dataInterpolation={(p) => `Loading ${p.toFixed(2)}%`} // Text
         initialState={(active) => active} // Initial black out state
       />
     </div>

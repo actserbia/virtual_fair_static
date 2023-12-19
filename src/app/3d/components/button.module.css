@@ -1,0 +1,33 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 5px 15px #0003;
+  -webkit-backdrop-filter: blur(33px);
+  backdrop-filter: blur(33px);
+  background-blend-mode: overlay;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255/var(--tw-bg-opacity));
+  --tw-bg-opacity: 45%;
+  border-radius: 9999px;
+  width: 14rem;
+  left: 2.75rem;
+  bottom: 70px;
+  position: fixed;
+}
+
+.link {
+  height: 55px;
+  transition: all 0.25s ease-out 0s;
+  font-weight: 400!important;
+  padding: 0;
+  background-color: initial;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  display: flex;
+}
+
+.iconWrapper {
+  margin-right: 14px;
+  display: flex;
+}
