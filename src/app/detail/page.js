@@ -6,7 +6,7 @@ export default function DetailPage() {
   return (
     <main className={styles.main}>
       <DetailScene />
-      <Button title="Back to homepage" href={`/${process.env.NEXT_PUBLIC_ROOT}`} />
+      <Button title="Back to homepage" href="/" />
     </main>
   )
 }
