@@ -6,7 +6,7 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 import DefaultMaterial from '../materials/DefaultMaterial';
 export function WaterRegion(props) {
-  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}models/waterRegion.glb`);
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/waterRegion.glb`);
   return (
     <group {...props} dispose={null}>
       <group rotation={[Math.PI / 2, 0, 0]} scale={0.01}>

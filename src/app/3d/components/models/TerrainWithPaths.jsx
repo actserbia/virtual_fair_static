@@ -6,7 +6,7 @@ import React from 'react';
 import { useGLTF } from '@react-three/drei';
 
 export function TerrainWithPaths(props) {
-  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}models/terrain_hills_with_paths.glb`);
+  const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/terrain_hills_with_paths.glb`);
   return (
     <group {...props} dispose={null}>
       <mesh

@@ -270,7 +270,7 @@ const MainScene = memo(function MainScene({ handleOpenAccountInfo, fairId }) {
           <ambientLight color={ambientColor} intensity={ambientIntensity} />
           <Environment
             background
-            path={`${process.env.NEXT_PUBLIC_ROOT}images/`}
+            path={`${process.env.NEXT_PUBLIC_ROOT}/images/`}
             files="venice_sunset_1k.hdr"
             blur={1}
           />
