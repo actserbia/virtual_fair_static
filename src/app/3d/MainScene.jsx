@@ -148,7 +148,7 @@ const MainScene = memo(function MainScene({ handleOpenAccountInfo, fairId }) {
             segments={20} // Number of particles
             position={[-520, 310, -520]}
           />
-          <Stats showPanel={0} className="stats" />
+          {/* <Stats showPanel={0} className="stats" /> */}
           <Preload all />
           <Zeppelin
             scale={0.002}

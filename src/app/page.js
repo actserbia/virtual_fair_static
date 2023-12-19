@@ -6,6 +6,7 @@ import { dummyBooths } from './3d/lib/consts/dummyData';
 import { useEffect, useContext} from 'react';
 import { GridContext } from './3d/contexts/GridContext';
 import { useRouter } from 'next/navigation';
+import Head from 'next/head';
 
 export default function HomePage() {
   const { initBooths } = useContext(GridContext);
@@ -21,8 +22,23 @@ export default function HomePage() {
   }
 
   return (
-    <main className={styles.main}>
-      <MainScene handleOpenAccountInfo={handleOpenAccountInfo} />
-    </main>
+    <>
+      <Head>
+        <title>Main scene</title>
+        <meta property="og:title" content="Main scene" />
+        {/* <meta
+          property="og:description"
+          content=""
+        /> */}
+        <meta
+          property="og:image"
+          content={`${process.env.NEXT_PUBLIC_ROOT}/images/og1.jpg`}
+        />
+      </Head>
+      <main className={styles.main}>
+        <MainScene handleOpenAccountInfo={handleOpenAccountInfo} />
+      </main>
+    </>
+
   )
 }
