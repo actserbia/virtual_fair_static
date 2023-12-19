@@ -63,4 +63,4 @@ export function Ring8Segment(props) {
   );
 }
 
-useGLTF.preload('/models/ring8_segment.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/ring8_segment.glb`);

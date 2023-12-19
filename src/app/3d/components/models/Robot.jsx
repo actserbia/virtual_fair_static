@@ -109,4 +109,4 @@ Robot.defaultProps = {
 
 export default Robot;
 
-useGLTF.preload('/models/robo.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/robo.glb`);

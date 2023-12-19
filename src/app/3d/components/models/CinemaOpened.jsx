@@ -174,4 +174,4 @@ export function CinemaOpened(props) {
   );
 }
 
-useGLTF.preload('/models/cinema_opened.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/cinema_opened.glb`);

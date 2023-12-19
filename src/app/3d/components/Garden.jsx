@@ -81,4 +81,4 @@ export function Garden(props) {
   );
 }
 
-useGLTF.preload('/models/dome_terrain.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/dome_terrain.glb`);

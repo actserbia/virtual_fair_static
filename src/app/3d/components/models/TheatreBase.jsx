@@ -63,4 +63,4 @@ export function TheatreBase(props) {
   );
 }
 
-useGLTF.preload('/models/theatre_terrain.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/theatre_terrain.glb`);

@@ -26,4 +26,4 @@ export function PathX(props) {
   );
 }
 
-useGLTF.preload('/models/path_x.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/path_x.glb`);

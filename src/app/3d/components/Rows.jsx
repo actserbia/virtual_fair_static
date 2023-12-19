@@ -207,4 +207,4 @@ const Rows = ({ handleOpenAccountInfo }) => {
 
 export default memo(Rows);
 
-useGLTF.preload('/models/booth_low.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/booth_low.glb`);

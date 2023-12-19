@@ -25,4 +25,4 @@ export function BoothBanner(props) {
   );
 }
 
-useGLTF.preload('/models/booth-banner.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/booth-banner.glb`);

@@ -40,4 +40,4 @@ export function Ring3SegmentLowInstance(props) {
   );
 }
 
-useGLTF.preload('/models/ring3_segment_low.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/ring3_segment_low.glb`);

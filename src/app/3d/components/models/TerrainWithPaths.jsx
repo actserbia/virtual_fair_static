@@ -55,4 +55,4 @@ export function TerrainWithPaths(props) {
   );
 }
 
-useGLTF.preload('/models/terrain_hills_with_paths.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/terrain_hills_with_paths.glb`);

@@ -114,4 +114,4 @@ export function Dome(props) {
   );
 }
 
-useGLTF.preload('/models/dome_object.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/dome_object.glb`);

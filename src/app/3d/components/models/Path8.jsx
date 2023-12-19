@@ -20,4 +20,4 @@ export function Path8(props) {
   );
 }
 
-useGLTF.preload('/models/path8.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/path8.glb`);

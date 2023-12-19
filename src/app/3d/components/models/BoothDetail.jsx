@@ -349,4 +349,4 @@ export function BoothDetail(props) {
   );
 }
 
-useGLTF.preload('/models/booth_detail.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/booth_detail.glb`);

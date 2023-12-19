@@ -111,7 +111,7 @@ const MainScene = memo(function MainScene({ handleOpenAccountInfo, fairId }) {
         />
         <AdaptiveDpr pixelated />
         <AdaptiveEvents />
-        <Suspense >
+        <Suspense fallback={<LoaderWrapper />}>
           <Cloud
             opacity={0.2}
             scale={50}

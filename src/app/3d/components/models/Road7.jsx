@@ -19,4 +19,4 @@ export function Road7(props) {
   );
 }
 
-useGLTF.preload('/models/road7.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/road7.glb`);

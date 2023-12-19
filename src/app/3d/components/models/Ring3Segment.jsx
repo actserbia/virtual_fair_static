@@ -70,4 +70,4 @@ export function Ring3Segment(props) {
   );
 }
 
-useGLTF.preload('/models/ring3_segment.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/ring3_segment.glb`);

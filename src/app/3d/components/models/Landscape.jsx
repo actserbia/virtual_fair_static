@@ -26,4 +26,4 @@ export function Landscape(props) {
   );
 }
 
-useGLTF.preload('/models/landscape.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/landscape.glb`);

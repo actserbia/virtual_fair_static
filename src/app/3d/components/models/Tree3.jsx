@@ -25,4 +25,4 @@ export function Tree3(props) {
   );
 }
 
-useGLTF.preload('/models/tree03.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/tree03.glb`);

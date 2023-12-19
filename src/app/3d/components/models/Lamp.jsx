@@ -25,4 +25,4 @@ export function Lamp(props) {
   );
 }
 
-useGLTF.preload('/models/streetLight.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/streetLight.glb`);

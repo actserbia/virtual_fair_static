@@ -29,4 +29,4 @@ export function WaterRegion(props) {
   );
 }
 
-useGLTF.preload('/models/waterRegion.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/waterRegion.glb`);

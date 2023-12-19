@@ -103,4 +103,4 @@ export function Theatre(props) {
   );
 }
 
-useGLTF.preload('/models/theatre.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/theatre.glb`);

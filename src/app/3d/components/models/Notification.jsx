@@ -39,4 +39,4 @@ export function Notification(props) {
   );
 }
 
-useGLTF.preload('/models/notification.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/notification.glb`);

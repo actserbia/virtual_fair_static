@@ -48,4 +48,4 @@ export function Zeppelin(props) {
   );
 }
 
-useGLTF.preload('/models/zeppelin.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/zeppelin.glb`);

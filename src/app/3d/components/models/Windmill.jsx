@@ -61,4 +61,4 @@ export function Windmil(props) {
   );
 }
 
-useGLTF.preload('/models/windmil.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/windmil.glb`);

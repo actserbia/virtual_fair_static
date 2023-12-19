@@ -20,4 +20,4 @@ export function Path6(props) {
   );
 }
 
-useGLTF.preload('/models/path6.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/path6.glb`);

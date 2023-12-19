@@ -51,4 +51,4 @@ export function Ring8SegmentLowInstance(props) {
   );
 }
 
-useGLTF.preload('/models/ring8_segment_low.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/ring8_segment_low.glb`);

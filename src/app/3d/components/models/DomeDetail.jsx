@@ -529,4 +529,4 @@ DomeDetail.defaultProps = {
 
 export default DomeDetail;
 
-useGLTF.preload('/models/dome_detail.glb');
+useGLTF.preload(`${process.env.NEXT_PUBLIC_ROOT}/models/dome_detail.glb`);
