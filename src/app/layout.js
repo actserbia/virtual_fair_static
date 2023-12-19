@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Three.js for 3D User Interfaces',
   openGraph: {
-    images: [`${process.env.NEXT_PUBLIC_ROOT}/images/og1.jpg`],
+    images: [`https://actserbia.github.io/virtual_fair_static/images/og1.jpg`],
   },
 }
 
