@@ -6,7 +6,7 @@ export default function InfoPage() {
   return (
     <main className={styles.main}>
       <DomeScene />
-      <Button title="Back to homepage" href={`${process.env.NEXT_PUBLIC_ROOT ? process.env.NEXT_PUBLIC_ROOT : "/" }`} />
+      <Button title="Back to homepage" href='/' />
     </main>
   )
 }
