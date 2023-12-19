@@ -6,6 +6,9 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Fair | React Three Fiber',
+  openGraph: {
+    images: [`${process.env.NEXT_PUBLIC_ROOT}/images/og1`],
+  },
 }
 
 export default function RootLayout({ children }) {
