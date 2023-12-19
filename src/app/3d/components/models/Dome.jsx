@@ -6,8 +6,8 @@ import * as THREE from 'three';
 import { changeCursorOnHover } from '../../lib/helpers/cursor';
 
 export function Dome(props) {
-  const router = useRouter();
   const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/dome_object.glb`);
+  const router = useRouter();
 
   const [hovered, hover] = useState(false);
   useFrame(() => {
@@ -31,7 +31,7 @@ export function Dome(props) {
   }, [hovered]);
 
   const handleClick = () => {
-    // router.push(`/sajam3d/${fairId}/info-pult`);
+    router.push('/info');
   };
 
   return (

@@ -22,7 +22,9 @@
     "three": "0.152.0"
   },
   "devDependencies": {
+    "@types/node": "20.10.5",
     "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "eslint-config-next": "14.0.4",
+    "typescript": "5.3.3"
   }
 }

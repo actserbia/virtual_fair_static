@@ -23,14 +23,15 @@ Globals.assign({
 import DomeDetail from './components/models/DomeDetail';
 import Robot from './components/models/Robot';
 import { toRadians } from './lib/helpers/math';
-import { Papercups } from '@papercups-io/chat-widget';
-import { useRouter } from 'next/router';
+// import { Papercups } from '@papercups-io/chat-widget';
+import { useRouter } from 'next/navigation';
 import PageTransition from './components/PageTransition';
 import LoaderWrapper from './components/Loader';
 
 const DomeScene = memo(function DetailScene({ statistics }) {
   const _hemisphereColor = new THREE.Color();
   const _hemisphereGroundColor = new THREE.Color();
+
   const { companies, job_applications, positions } = statistics;
 
   const router = useRouter();
@@ -41,8 +42,8 @@ const DomeScene = memo(function DetailScene({ statistics }) {
   const handleRouteComplete = () => {
     setIsLoading(false);
   };
-  router.events.on('routeChangeStart', handleRouteChange);
-  router.events.on('routeChangeComplete', handleRouteComplete);
+  // router.events.on('routeChangeStart', handleRouteChange);
+  // router.events.on('routeChangeComplete', handleRouteComplete);
 
   _hemisphereColor.setHSL(0.6, 1, 0.6);
   // hsl(216 100% 60% / 1) #3385ff
@@ -66,13 +67,13 @@ const DomeScene = memo(function DetailScene({ statistics }) {
     }
   };
 
-  const handleRobotClick = () => {
-    Papercups.toggle();
-  };
+  // const handleRobotClick = () => {
+  //   Papercups.toggle();
+  // };
 
   const robotProps = {
     onClick: () => handleRobotClick(),
-    tooltip: "robotTooltip",
+    tooltip: "Hi!",
     infoPult: true,
   };
 
@@ -81,7 +82,7 @@ const DomeScene = memo(function DetailScene({ statistics }) {
       {isLoading && <PageTransition />}
       <Canvas
         dpr={[1, 2]}
-        style={{ width: '100%', height: '100%' }}
+        style={{ width: '100vw', height: '100vh' }}
         shadows
         gl={{ powerPreference: 'high-performance' }}
         linear
@@ -254,5 +255,13 @@ const DirectionalLight = () => {
     </directionalLight>
   );
 };
+
+DomeScene.defaultProps = {
+  statistics: {
+    companies: 40,
+    job_applications: 2183,
+    positions: 659
+  }
+}
 
 export default DomeScene;

@@ -10,9 +10,11 @@ import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import { changeCursorOnHover } from '../../lib/helpers/cursor';
 import { Notification } from './Notification';
+import { useRouter } from 'next/navigation';
 
 export function Theatre(props) {
   const ref = useRef();
+  const router = useRouter();
   const { nodes, materials } = useGLTF(`${process.env.NEXT_PUBLIC_ROOT}/models/theatre.glb`);
   const [hovered, hover] = useState(false);
   useFrame(() => {
@@ -31,7 +33,7 @@ export function Theatre(props) {
   const { fairId } = props;
 
   const handleClick = () => {
-    // router.push(`/sajam3d/${fairId}/teatar3d`);
+    router.push(`/theatre`);
   };
 
   // materials.GREY_PHY.roughness = 0.8;

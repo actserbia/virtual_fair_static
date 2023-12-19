@@ -51,11 +51,11 @@ const Robot = (props) => {
           <div className={`_3d-content ${hovered && 'active'}`}>
             {infoPult ? (
               <figure className="mb-2">
-                nzs logo
+                {/* Hi */}
               </figure>
             ) : (
               <figure className="relative mb-2 aspect-auto h-9 w-2/5">
-                logo again
+                {/* logo again */}
               </figure>
             )}
             <div className="_3d-description">{tooltip}</div>

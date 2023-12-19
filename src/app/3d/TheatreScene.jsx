@@ -17,11 +17,12 @@ import { animated, useSpring } from '@react-spring/three';
 import { useContext, useRef } from 'react';
 import { GridContext } from './contexts/GridContext';
 import { useControls } from 'leva';
-import { TheatrePlaneComponent } from '@/components/TheatreComponent/TheatrePlaneComponent';
+// import { TheatrePlaneComponent } from '@/components/TheatreComponent/TheatrePlaneComponent';
 import { toRadians } from './lib/helpers/math';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import PageTransition from './components/PageTransition';
 import LoaderWrapper from './components/Loader';
+import { TheatrePlaneComponent } from './components/TheatrePlaneComponent';
 
 const TheatreScene = ({ cinemaMode, setCinemaMode, currentVideo }) => {
   const [firstTime, setFirstTime] = useState(true);
@@ -39,15 +40,15 @@ const TheatreScene = ({ cinemaMode, setCinemaMode, currentVideo }) => {
 
   const hemisphereGroundColor = '#88ccff';
   const pointColor = '#ff4800';
-  router.events.on('routeChangeStart', handleRouteChange);
-  router.events.on('routeChangeComplete', handleRouteComplete);
+  // router.events.on('routeChangeStart', handleRouteChange);
+  // router.events.on('routeChangeComplete', handleRouteComplete);
 
   return (
     <>
       {isLoading && <PageTransition />}
       <Canvas
         // onClick={handleClick}
-        style={{ width: '100%', height: '100%' }}
+        style={{ width: '100vw', height: '100vh' }}
         camera={{ fov: 40, position: [15, 1, 15] }}
       >
         <Suspense fallback={<LoaderWrapper />}>
@@ -96,7 +97,6 @@ const TheatreScene = ({ cinemaMode, setCinemaMode, currentVideo }) => {
               color={'white'}
             />
             <BakeShadows />
-
             <TheatrePlaneComponent
               visible={!wallLightOn}
               cinemaMode={cinemaMode}
