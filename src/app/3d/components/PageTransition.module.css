@@ -1,3 +1,4 @@
+
 .wrapper {
   width: 100vw;
   height: 100vh;
@@ -31,4 +32,5 @@
   position: relative;
   top: 12px;
   height: 0px;
+  color: black;
 }
